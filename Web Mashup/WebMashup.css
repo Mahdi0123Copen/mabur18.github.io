@@ -1,0 +1,223 @@
+body, html {
+    width: 100%;
+    margin: 0;
+    background-color: #faf5ed;
+    color: #353432;
+    font-family: 'Newsreader', serif;
+    font-family: 'Noto Sans JP', sans-serif;
+    /*font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;*/
+  }
+  
+  .container {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: auto;
+    display: flow-root;
+  }
+
+  h3{
+    text-align: center;
+  }
+
+  header{
+    height: 50px;
+    width: 100%;
+    background:#353432;
+    color: #faf5ed;
+  }
+
+  nav{
+    padding: 10px;
+    position: absolute;
+    right: 0;
+  }
+
+  a {
+    color:inherit;
+    text-decoration: none;
+    margin:20px;
+
+  }
+
+  .column {
+    float: left;
+    width: 50%;
+  }
+
+  .column p{
+    font-size: 18px;
+    border-radius: 10px;
+    margin-left: 20px;
+    padding: 10px;
+    box-shadow: -1px 5px 15px 0px #ccc;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .leftpane {
+      width: 25%;
+      height: 100%;
+      float: left;
+      border-collapse: collapse;
+      display: inline-table;
+  }
+
+  .leftpane h3{
+    margin-top: 20px;
+  }
+
+  .headline{
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  article {
+      background-color: #efefee;
+      box-shadow: -1px 5px 9px 0px black;
+      border-radius: 5px;
+      width: 250px;
+      margin: 10px auto;
+      padding: 10px 10px 10px 10px;
+    }
+  article  p {
+      width:100%;
+      height:auto;
+    }
+  
+  .middlepane {
+      width: 50%;
+      height: 100%;
+      float: left;
+      border-collapse: collapse;
+  }
+
+  #map-container {
+    width: 100%;
+    height: 90%;
+    box-shadow: -1px 5px 15px 0px #ccc
+  }
+
+  #map {
+    width: 100%;
+    height: 100%;
+
+  }
+  
+  .rightpane {
+    overflow:hidden;
+    width: 25%;
+    height: 160%;
+    position: relative;
+    float: right;
+    border-collapse: collapse;
+  }
+  
+  .toppane {
+    margin: auto;
+    text-align: center;
+    border-collapse: collapse;
+    background: #5c5a56;
+    color: #faf5ed;
+  }
+
+  .toppane h2{
+    text-decoration: underline;
+    padding: 10px;
+  }
+
+ #wrapper {margin-right:30px; }
+      .infoBox {border: 1px solid #393B3A;border-radius:10px; padding:20px; width:400px;float:right;margin-left: 20px;  box-shadow: -1px 5px 15px 0px #ccc;}
+      a {text-decoration: none; color: #16a085;}
+      a:hover {color: #1abc9c}
+      .cover {margin: 5px 0px 0px 0px}
+      .description {width: 763;text-align: justify;}
+
+.OBL_list li, .movie_list li, .gBook_list li{
+  width: 215px;
+  margin: 5px auto 5px auto;
+  box-shadow: -1px 5px 15px 0px #ccc;
+  padding:5px;
+  border-radius: 10px;
+}
+
+.OBL_list, .movie_list, .gBook_list{
+  display: grid;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.img_list img{
+  margin: 5px 0px 5px 0px;
+  box-shadow: -1px 5px 9px 0px black;
+}
+
+.input{
+  text-align: center;
+  margin: 50px auto;
+}
+
+.input input{
+  width: 300px;
+  height: 55px;
+  padding: 10px 20px;
+  background: #e4dfd7;
+  border: none;
+  border-radius: 10px;
+  font-weight:bold;
+  font-size: 20px;
+}
+
+.card{
+  width: 50%;
+  background: #e4dfd7;
+  height: 250px;
+  margin: 50px auto;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+}
+
+.card p{
+  padding: 5px;
+}
+
+.column1 {
+  float: left;
+  width: 33.33%;
+  text-align: center;
+}
+
+/* Clear floats after the columns */
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.selfg{
+  width: 50%;
+  float: left;
+  box-shadow: -1px 5px 15px 0px #ccc;
+  margin-top: -400px;
+  border-radius: 10px;
+  margin-left: 20px;
+}
+
+.selfg p{
+  padding: 20px;
+}
+
+.bar {
+    fill: steelblue;
+}
+
+svg{
+  
+  box-shadow: -1px 5px 15px 0px #ccc;
+}

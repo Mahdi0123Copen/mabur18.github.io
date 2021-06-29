@@ -1,0 +1,16 @@
+{
+    "Fact1": 
+    {
+       "id":"01",
+       "fact": "Around 75% of Earths land is already degraded",
+       "edition": "Source:",
+       "source": "National Geographics"
+    },
+	  "Fact2": 
+    {
+       "id":"07",
+       "fact": "Desertification can be reversed with the right resources",
+       "edition": "Source:",
+       "source": "Green Facts"
+    }
+}

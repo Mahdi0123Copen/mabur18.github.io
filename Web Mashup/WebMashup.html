@@ -1,0 +1,217 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
+    <script src="WebMashup.js"></script>
+    <script src="NYT_API.js"></script>
+    
+    <link rel="stylesheet" href="WebMashup.css">
+    <title>Stop Desertification News</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader&family=Noto+Sans+JP&family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="header">
+        <nav id="navbar" class="navbar">
+            <div class="navbar-nav">
+              <a class="nav-item" href="#1">About</a>
+              <a class="nav-item" href="#2">Latest</a>
+              <a class="nav-item" href="#3">Videos</a>
+              <a class="nav-item" href="#4">Entertainment</a>
+              <a class="nav-item" href="#5">Data</a>
+              <a class="nav-item" href="#6">Check</a>
+            </div>
+        </nav>
+    </header>
+    <h1 style="text-align: center;">Desertification and Exhaustion of Soil News</h1>
+    <section class="container" id="1">
+        <div class="toppane"><h2>About</h2></div>
+        <div class="row_content">
+            <div class="column">
+                <h3 style="text-align: center;">Purpose</h3>
+                <p> 
+                    Don’t know what desertification or exhaustion of soil means? Well then you have come to the right site. 
+                    this site will provide you with important knowledge on how crucial forestation is and dangerous desertification is. 
+                    <br> 
+                    <br>
+                    There has over the years been an increase in desertification, and this site provides you with information that no other site does on this topic. 
+                    With everything from charts, videos, interactive visuals and even articles. 
+                    Join the fight against Desertification and help save billions and the future of the earth. 
+                    Help protecting the earth and promoting a greener earth
+                </p>
+            </div>
+            <div class="column">
+                <h3>The Greatest Desert</h3>
+            <div id="wrapper">
+                <div id="content">
+                    <h2 class="headline"></h2>
+                <div class="infoBox"></div>
+              </div>
+            </div>
+            </div>
+        </div>
+        <div class="selfg">
+            <h3>Facts about Desertification</h3>
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    $.getJSON("fact.json", function(obj){
+                        $.each(obj, function(key, value){
+                            $("p.p").append(" - "+value.fact+"</br> ");
+                            $("p.p").append(value.edition+" ");
+                            $("p.p").append("<em>"+value.source+"</em></br>");
+                        });
+                    });
+                });
+                </script>
+            <p class="p"></p>
+        </div>
+    
+
+    </section>
+
+    <section class="container" id="2">
+        <div class="toppane"><h2>Latest Updates</h2></div>
+        <div class="leftpane">
+            <h3>New Yorker Times</h3>
+            <img src="nyt.jpg" alt="NYT" style="width: 190px; margin: auto;
+            display: block;">
+            <div class="nyt"></div>
+        </div>
+        <div class="middlepane"><h3>MapBox - Tree Cover Loss 2001-2019</h3>
+            <div id="map-container">
+                <div id="map"></div>
+            </div>
+            <a href="https://resource-watch.github.io/doc-api/tutorials.html#dynamic-queries-at-runtime">Source: MapBox + Resource Watch</a>
+        </div>
+        <div class="rightpane">
+            <h3>Images</h3>
+            <a href="https://pixabay.com/">
+                <img src="https://pixabay.com/static/img/public/leaderboard_a.png" style="width: 95%; margin-bottom: -30px;" alt="Pixabay">
+            </a>
+            <ul class="img_list"></ul>
+        </div>
+    </section>
+
+    <section class="container" id="3">
+        <div class="toppane"><h2>Videos</h2></div>
+        <div class="videos">
+            <ul class="video_list"></ul>
+        </div>
+        <a href="https://developers.google.com/youtube/v3">Source: Youtube</a>
+    </section>
+
+    <section class="container" id="4">
+        <div class="toppane"><h2>Entertainment</h2></div>
+        <div class="row1">
+            <div class="column1">
+                <h3>Movies - OMDB</h3>
+                <ul class="movie_list"></ul>
+                <a href="http://www.omdbapi.com/">Source: Open Movie Data Base</a>
+            </div>
+            <div class="column1">
+                <h3>Books - Open Library</h3>
+                <ul class="OBL_list"></ul>
+                <a href="http://openlibrary.org/">Source: Open Library</a>
+            </div>
+            <div class="column1">
+                <h3>Books - Google Books</h3>
+                <ul class="gBook_list"></ul>
+                <a href="https://developers.google.com/books/docs/v1/getting_started">Source: Google Books</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" id="5">
+        <div class="toppane"><h2>Data</h2></div>
+        <div class="row">
+            <div class="column">
+                <h3>Bar Chart - Denmark</h3>
+                <svg width="600" height="500"></svg>
+            </div>
+            <div class="column">
+                <h3>Country with the largest rainforest and how its dropping - JScharting</h3>
+                <div id="chartDiv" style="width:100%; height:400px; margin:0 auto; box-shadow: -1px 5px 15px 0px #ccc;"></div>
+            </div>
+          </div>
+    <section>
+
+    <section class="container" id="6">
+        
+        <div class="toppane"><h2>Weather Check</h2></div>
+        <p style="text-align: center;">Check if your city matches the weather of Deserts, which are on average 38 celsius a day</p>
+        
+        <div class="input">
+            <input type="text" placeholder="Enter the city" class="inputtext">
+            <input type="submit" value="Submit" class="submit">
+          </div>
+        </div>
+
+        <div class>
+          <div class="card">
+            <h1 class="name" id="name"></h1>
+            <p class="temp"></p>
+            <p class="clouds"></p>
+            <p class="desc"></p>
+          </div>
+        </div>
+        <a href="https://openweathermap.org/appid">Source: Open Weather Map</a>
+    </section>
+
+    <script src="openweatherapi.js"></script>
+    <script src="mapForest.js"></script>
+</body>
+<script src="https://code.jscharting.com/2.9.0/jscharting.js"></script>
+<script src="indexx.js"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script>
+    var svg = d3.select("svg"),
+	            margin = 200,
+	            width = svg.attr("width") - margin,
+	            height = svg.attr("height") - margin
+
+	var xScale = d3.scaleBand().range([0, width]).padding(0.4),
+	            yScale = d3.scaleLinear().range([height, 0]);
+
+	var g = svg.append("g")
+	            .attr("transform", "translate(" + 100 + "," + 100 + ")");
+	
+			g.append("text")
+			.attr("transform", "translate(50,-60)")
+			.attr("x", 60)
+			.attr("y", 30)
+			.attr("font-size", "15px")
+			.attr("font-weight", "bold")
+			.text("Annual deforestation in Denmark")
+
+	    d3.csv("defoDen.csv", function(error, data) {
+	        if (error) {
+	            throw error;
+	        }
+
+	        xScale.domain(data.map(function(d) { return d.year; }));
+	        yScale.domain([0, d3.max(data, function(d) { return d.value; })]);
+
+	        g.append("g")
+	         .attr("transform", "translate(0," + height + ")")
+	         .call(d3.axisBottom(xScale));
+
+	        g.append("g")
+	         .call(d3.axisLeft(yScale).tickFormat(function(d){
+	             return "" + d;
+	         }).ticks(10));
+
+	        g.selectAll(".bar")
+	         .data(data)
+	         .enter().append("rect")
+	         .attr("class", "bar")
+	         .attr("x", function(d) { return xScale(d.year); })
+	         .attr("y", function(d) { return yScale(d.value); })
+	         .attr("width", xScale.bandwidth())
+	         .attr("height", function(d) { return height - yScale(d.value); });
+	    });
+</script>
+</html>
